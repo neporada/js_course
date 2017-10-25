@@ -61,10 +61,20 @@ var date = new Date();
 
 var month = date.getMonth;
 
+// я об этом не рассказывала но тут нужно вызвать функцию date.getMonth() и еще - 1 сделать - это момент в JS месяц всегда на 1
+// больше текущего то есть получиться
+
+/*  
+var date = new Date();
+var month = date.getMonth() - 1;
+*/
+
 for ( i = 0; i < arr.length; i++ ) {
+    // лучше уже писать !==
     if (i != month) {
         console.log(arr[i])
     } else {
         console.log('%c', 'font: bold;', arr[i])
     }
 } // Что я делаю ни так чтобы выделить жирным текущий месяц?
+// из-за того что я писала више)
