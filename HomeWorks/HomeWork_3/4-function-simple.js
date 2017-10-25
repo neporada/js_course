@@ -20,7 +20,7 @@ double(6);
 function range(x, y) {
 
     var result = 0;
-
+    // you can check first if x < y and if true go on with the for statement, if not just change places x and y variables
     if (x < y) {
         for (var i = x; i <= y; i++) {
             result += i;
@@ -50,11 +50,15 @@ function oddOrEven(x){
      else {
          return false;
      }
+    // or just type 
+    /* return x % 2 === 0; */
 }
 
 oddOrEven();
 
 // 6 task
+
+// ?? Maybe you have some questions you can write them here so I can answer it
 
 // 7 task
 
