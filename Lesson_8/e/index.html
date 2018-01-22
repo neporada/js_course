@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        div {
+            padding: 20px;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="first">
+        <div id="second">
+            dthrdhrhdtrjjy
+        </div>
+    </div>
+
+    <ul>
+        <li>thfth</li>
+        <li>thfth</li>
+        <li>thfth</li>
+        <li>thfth</li>
+    </ul>
+
+    <button>Add</button>
+
+
+<script>
+
+    var first = document.getElementById('first');
+    var second = document.getElementById('second');
+
+    first.addEventListener('click', function () {
+//        this.style.background = 'black';
+
+//        alert(this.getAttribute('id'))
+    }, false);
+
+//    second.addEventListener('click', function (event) {
+////        this.style.background = 'black';
+////        first.background = 'white';
+//
+//        event.stopImmediatePropagation();
+//
+//        alert(this.getAttribute('id'))
+//    }, false);
+
+    second.addEventListener('click', function (event) {
+//        alert(this.nodeName)
+
+        console.log(event, event.target, event.currentTarget, this);
+    }, false);
+
+</script>
+
+    <div id="rg">
+        <button>hh</button>
+        <button>5y5</button>
+        <button>5y5y</button>
+        <button>5yd5y5</button>
+    </div>
+
+    <script>
+        document.getElementById('rg').addEventListener('click', function (event) {
+            console.log(this, event, event.currentTarget, event.target);
+        }, false);
+        document.getElementById('rg').addEventListener('click', function (event) {
+            console.log(this, event, event.currentTarget, event.target);
+        }, true);
+    </script>
+
+<!--
+
+create div
+
+ create 4 button
+
+ click in div => event.target === button
+
+ alert('text inside button');
+ -->
+
+</body>
+</html>

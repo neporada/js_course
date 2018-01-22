@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>
+    Click me
+</button>
+<script>
+    document.querySelector('button').onclick = function () {
+        var name = prompt('Name')
+        alert('Hello' + $name)
+        console.log(name)
+    }
+</script>
+<script>
+    var but = document.getElementById('myClick'):
+    function addClick() {
+        console.log('Click');
+    }
+
+    but.addEventListener('click', function () {
+        console.log('Click');
+    });
+    but.addEventListener('click', function () {
+        console.log('dslvknakn');
+    })
+</script>
+<button id = 'myClick'>
+    Number1
+</button>
+<button id = 'my'>
+    Number2
+</button>
+<script>
+    var first = document.getElementById('myClick');
+    var second = document.getElementById('my');
+
+    function handler (){
+        alert('Click')
+    }
+    first.addEventListener('click', handler );
+
+    function remove() {
+        first.removeEventListener('click', handler);
+        alert('Click')
+    }
+
+    second.addEventListener('click', remove);
+</script>
+
+<div id = 'Sen'>
+    Please over me by mouse
+</div>
+<script>
+    document.getElementById('Sen').onmouseover = function() {
+        this.style.color = 'red';
+    };
+    document.getElementById('Sen').onmouseout = function () {
+        this.style.color = 'black';
+    }
+</script>
+<form action="">
+
+    <div>
+        <input type="text">
+    </div>
+
+    <div>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+    </div>
+
+    <div>
+        <input type="checkbox">
+    </div>
+
+    <button>Submit</button>
+
+</form>
+</body>
+</html>
