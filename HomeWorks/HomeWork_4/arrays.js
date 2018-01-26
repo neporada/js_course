@@ -195,17 +195,107 @@ changeArr();
 // Task 11
 
 var arr1 =  [1, 2, 3, 4, 5, 6],
-    arr2 =  [1, 2, 3, 4, ],
+    arr2 =  [1, 2, 3, 4],
     sum = [];
 
 function arraysSum () {
-
-    for ( var i = 0; i < arr1.lenhgt || i < arr2.length; i++) {
-       sum.push(arr1[i] + arr2[i]);
+var summ;
+    for ( var i = 0; i < arr1.length || i < arr2.length; i++) {
+        summ = 0;
+        if (arr1[i] != undefined){
+            summ = summ+arr1[i];
+        }
+        if (arr2[i] != undefined){
+            summ += arr2[i];
+        }
+        sum.push(summ);
     }
 }
 arraysSum(arr1, arr2);
 console.log(sum);
 
 // Task 12
+
+function deleteItemFromArray (arr, x) {
+    var filtredArray = arr.filter(function (y) {
+        return (y !== 3);
+    });
+    console.log(filtredArray);
+}
+
+deleteItemFromArray([1, 2, 3, 4,3,3], 3);
+
+// Task 13
+
+function intersection (x, y, z) {
+    var newArr =[];
+
+    for (var i = 0; i <x.length; i++) {
+        if (y.indexOf(x[i]) !== -1) {
+            if (z.indexOf(x[i]) !== -1) {
+            newArr.push(x[i]);
+            }
+        }
+    }
+
+    console.log(newArr)
+}
+intersection([1, 2, 3], [101, 2, 1, 10], [2, 1]);
+
+// Task 14
+
+var arr = [2, 3, 1, 4];
+
+function modifiedArr (origArr) {
+   var newArr = [],
+       counter;
+
+    for (var i = 0; i <origArr.length; i++) {
+       counter = origArr[i];
+
+       for ( var j = 0; j < counter; j++) {
+            newArr.push(counter);
+       }
+
+    }
+
+    return newArr;
+}
+
+
+arr = modifiedArr(arr);
+
+
+// Task 15
+
+function additionalZero (arr) {
+
+    for (var i = 0; i < 10; i++ ) {
+        arr.push(0)
+    }
+    console.log([1,2,3])
+};
+
+additionalZero();
+
+// Task 16
+
+var arr = [1, -5, 10, 2, -10, 23, 45];
+
+function sortArr (array) {
+    array.sort()
+}
+
+
+var negative = arr.filter(function (oneElement) {
+    return oneElement < 0;
+});
+
+console.log('Negative numbers: ' + negative.join(', '));
+
+
+
+console.log('First three min elements of array are: ' + arr[0] + ', ' + arr[1] + ', ' + arr[2] + '.');
+
+
 
