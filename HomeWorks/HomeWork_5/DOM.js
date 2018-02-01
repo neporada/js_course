@@ -31,4 +31,5 @@ console.log(document.body.style.backgroundColor + ', ' + document.body.style.col
 
 console.log(getComputedStyle(body).backgroundColor + ', ' + getComputedStyle(body).color);
 
+//// console.log(getComputedStyle(body).backgroundColor + ', ' + getComputedStyle(body).color);
 
